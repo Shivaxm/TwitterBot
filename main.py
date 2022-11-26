@@ -25,5 +25,5 @@ response = requests.get(url).json()
 temp_kelvin = response['main']['temp']
 temp_f = kelvinToCelsius(temp_kelvin)
 
-s = "Temperature in " + CITY + ": " + str(round(temp_f, 2)) + "° Fahrenheit"
-api.update_status(s)
+twit_text = "Temperature in " + CITY + ": " + str(round(temp_f, 2)) + "° Fahrenheit"
+api.update_status(twit_text)
